@@ -5,16 +5,17 @@ MAINTAINER Lennard Cornelis "lennardcornelis@gmail.com
 RUN apk add --update curl git unzip python2 py-pip tar
 #RUN apk add --update curl git unzip python2 py-pip && pip install -U py4
 
-ENV PYTHONHASHSEED=0 \
-    PYTHONIOENCODING=UTF-8 \
-    HADOOP_VERSION=2.7.3 \
-    HADOOP_HOME=/usr/hadoop-$HADOOP_VERSION \
-    HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop \
-    PATH=$PATH:$HADOOP_HOME/bin 
-ENV SPARK_VERSION=2.1.1 \
-    SPARK_PACKAGE=spark-${SPARK_VERSION}-bin-hadoop2.7 \
-    SPARK_HOME=/usr/spark-${SPARK_VERSION} \
-    PYSPARK_PYTHON=python2
+ENV PYTHONHASHSEED=0 
+ENV PYTHONIOENCODING=UTF-8 
+ENV HADOOP_VERSION=2.7.3 
+ENV HADOOP_HOME=/usr/hadoop-$HADOOP_VERSION 
+ENV HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop 
+ENV PATH=$PATH:$HADOOP_HOME/bin 
+ENV SPARK_VERSION=2.1.1 
+ENV SPARK_PACKAGE=spark-$SPARK_VERSION-bin-hadoop2.7 
+ENV SPARK_HOME=/usr/spark-$SPARK_VERSION 
+ENV PYSPARK_PYTHON=python2
+
 RUN curl -sL --retry 3 \
 "http://archive.apache.org/dist/hadoop/common/hadoop-$HADOOP_VERSION/hadoop-$HADOOP_VERSION.tar.gz" \
 | gunzip \
