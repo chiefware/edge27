@@ -27,7 +27,7 @@ ENV PYTHONHASHSEED=0 \
     RUN curl -sL --retry 3 \
     "https://d3kbcqa49mib13.cloudfront.net/$SPARK_PACKAGE.tgz" \
     | gunzip \
-    | tar x -C /usr/ \
+    | tar -x -C /usr/ \
     && mv /usr/$SPARK_PACKAGE $SPARK_HOME \
     && rm -rf $SPARK_HOME/examples $SPARK_HOME/ec2
  
