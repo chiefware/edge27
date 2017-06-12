@@ -7,7 +7,7 @@ RUN apk add --update curl git unzip python2 py-pip
 
 ENV PYTHONHASHSEED=0 \
     PYTHONIOENCODING=UTF-8 \
-    HADOOP_VERSION=2.7.3 \
+    HADOOP_VERSION=2.7 \
     HADOOP_HOME=/usr/hadoop-$HADOOP_VERSION \
     HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop \
     PATH=$PATH:$HADOOP_HOME/bin \
