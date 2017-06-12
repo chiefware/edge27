@@ -26,7 +26,7 @@ ENV PYTHONHASHSEED=0 \
 #   "https://d3kbcqa49mib13.cloudfront.net/$SPARK_PACKAGE.tgz" \
 #    https://d3kbcqa49mib13.cloudfront.net/spark-2.1.1-bin-hadoop2.7.tgz
     RUN curl -sL --retry 3 \
-    "https://d3kbcqa49mib13.cloudfront.net/spark-2.1.1-bin-hadoop2.7.tgz2.1.1-bin-hadoop2.7.tgz" \
+    "https://d3kbcqa49mib13.cloudfront.net/spark-2.1.1-bin-hadoop2.7.tgz" \
     | gunzip \
     | tar -x -C /usr/ \
     && mv /usr/$SPARK_PACKAGE $SPARK_HOME \
