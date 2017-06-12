@@ -29,8 +29,8 @@ ENV PYTHONHASHSEED=0 \
     "https://d3kbcqa49mib13.cloudfront.net/spark-2.1.1-bin-hadoop2.7.tgz" \
     | gunzip \
     | tar -x -C /usr/ \
-    && mv /usr/$SPARK_PACKAGE $SPARK_HOME \
-    && rm -rf $SPARK_HOME/examples $SPARK_HOME/ec2
+    && mv /usr/${SPARK_PACKAGE} ${SPARK_HOME} \
+    && rm -rf ${SPARK_HOME}/examples ${SPARK_HOME}/ec2
  
     WORKDIR $SPARK_HOME
     CMD ["bin/spark-class", "org.apache.spark.deploy.master.Master"]
