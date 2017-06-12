@@ -2,7 +2,8 @@ FROM alpine:latest
 MAINTAINER Lennard Cornelis "lennardcornelis@gmail.com
 
 
-RUN apk add --update curl git unzip python2 py-pip && pip install -U py4
+RUN apk add --update curl git unzip python2 py-pip 
+#RUN apk add --update curl git unzip python2 py-pip && pip install -U py4
 
 ENV PYTHONHASHSEED=0 \
     PYTHONIOENCODING=UTF-8 \
