@@ -1,4 +1,5 @@
-FROM alpine-java:latest
+FROM anapsix/alpine-java:latest
+#FROM alpine-java:latest
 MAINTAINER Lennard Cornelis "lennardcornelis@gmail.com
 
 
