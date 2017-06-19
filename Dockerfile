@@ -2,7 +2,7 @@ FROM alpine:latest
 MAINTAINER Lennard Cornelis "lennardcornelis@gmail.com
 
 
-RUN apk add --update curl git unzip python2 py-pip tar
+RUN apk add --update bash curl git unzip python2 py-pip tar
 #RUN apk add --update curl git unzip python2 py-pip && pip install -U py4
 
 ENV PYTHONHASHSEED=0 
