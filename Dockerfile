@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM docker-alpine-java:latest
 MAINTAINER Lennard Cornelis "lennardcornelis@gmail.com
 
 
