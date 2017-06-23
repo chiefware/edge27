@@ -33,4 +33,4 @@ RUN curl -sL --retry 3 \
 && rm -rf $SPARK_HOME/examples $SPARK_HOME/ec2
  
 WORKDIR $SPARK_HOME
-CMD ["bin/spark-class", "org.apache.spark.deploy.master.Master"]
+#CMD ["bin/spark-class", "org.apache.spark.deploy.master.Master"]
