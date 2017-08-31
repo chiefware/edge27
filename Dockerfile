@@ -1,4 +1,5 @@
-FROM openjdk:alpine
+FROM openjdk:7-jdk-alpine
+#FROM openjdk:alpine
 #FROM alpine-java:latest
 MAINTAINER Lennard Cornelis "lennardcornelis@gmail.com
 
@@ -12,7 +13,7 @@ ENV HADOOP_VERSION=2.7.3
 ENV HADOOP_HOME=/usr/hadoop-$HADOOP_VERSION 
 ENV HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop 
 ENV PATH=$PATH:$HADOOP_HOME/bin 
-ENV SPARK_VERSION=2.2.0 
+ENV SPARK_VERSION=2.1.0 
 ENV SPARK_PACKAGE=spark-$SPARK_VERSION-bin-hadoop2.7 
 ENV SPARK_HOME=/usr/spark-$SPARK_VERSION 
 ENV PYSPARK_PYTHON=python2
